@@ -28,6 +28,7 @@
                         <td>{{ $student->name }}</td>
                         <td>{{ $student->email }}</td>
                         <td>{{ $student->phone }}</td>
+                        <td>{{ $student->subject ? $student->subject->name : 'N/A' }}</td>
                         <td>
                             <a href="{{ route('students.edit', $student->id) }}" class="btn btn-sm btn-warning">Edit</a>
                             <form action="{{ route('students.destroy', $student->id) }}" method="POST" class="d-inline"

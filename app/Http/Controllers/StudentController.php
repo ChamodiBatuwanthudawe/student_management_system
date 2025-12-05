@@ -10,7 +10,7 @@ class StudentController extends Controller
 {
     public function index()
     {
-        $students =Student::orderBy('id', 'desc')->get();
+        $students = Student::with('subject')->orderBy('id', 'desc')->get();
         return view('students.index', compact('students'));
     }
 
